@@ -5,6 +5,7 @@ const txtNumber = document.getElementById("Number");
 const alertValidaciones = document.getElementById("alertValidaciones");
 const alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 const tablaListaCompras = document.getElementById("tablaListaCompras");
+const fecha = document.getElementById("fecha");
 
 // Se obtiene el elemento 0 del HTMLCollection por si a caso se obtiene una lista con más de 1 elemento.
 const cuerpoTablas = document.getElementsByTagName("tbody").item(0);
@@ -137,6 +138,9 @@ window.addEventListener("load", function(event){
             cuerpoTablas.insertAdjacentHTML("beforeend",row);
         });
     }
+
+    let now = new Date();
+    fecha.innerText = (now.getMonth()+1) + " / " + now.getFullYear();
 
 })
 
